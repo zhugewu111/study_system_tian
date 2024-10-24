@@ -1,0 +1,20 @@
+#指定激活的环境
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study_system
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: 8080

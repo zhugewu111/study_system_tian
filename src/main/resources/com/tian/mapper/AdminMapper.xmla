@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tian.mapper.AdminMapper">
+    <!--联表查询-->
+    <select id="resultList" resultType="com.tian.pojo.UEEResult">
+        select user.username,exam.start_time,exam.end_time,eresult.score,eresult.record
+        from user,exam,eresult
+        where user.id=eresult.user_id and exam.id=eresult.exam_id
+    </select>
+</mapper>
